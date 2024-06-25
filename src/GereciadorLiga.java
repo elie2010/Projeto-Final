@@ -4,21 +4,21 @@ public class GereciadorLiga {
 
     private static final ArrayList<Liga> listaLiga = new ArrayList<>();
 
-    public static void salvarLiga(Liga liga) {
+    public static void salvarLiga (Liga liga) {
         listaLiga.add(liga);
     }
 
-    public static ArrayList<Liga> getListaLiga() {
+    public static ArrayList<Liga> getListaLiga () {
         return listaLiga;
     }
 
-    public static void verificarListaVaziaLigas() throws Exception {
+    public static void verificarListaVaziaLigas () throws Exception {
         if (listaLiga.isEmpty()) {
             throw new Exception("\nATENÇÃO:Nenhuma liga cadastrada");
         }
     }
 
-    public static Liga buscarLiga(String liga) throws Exception {
+    public static Liga buscarLiga (String liga) throws Exception {
         for (Liga tempLiga : listaLiga) {
             if (tempLiga.getNomeLiga().equals(liga)) {
                 return tempLiga;
@@ -27,7 +27,7 @@ public class GereciadorLiga {
         throw new Exception("\nATENÇÃO:Liga com o nome" + liga + " não encontrda:");
     }
 
-    public static void excluirLiga(Liga liga) {
+    public static void excluirLiga (Liga liga) {
         listaLiga.remove(liga);
     }
 
